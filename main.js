@@ -25,7 +25,7 @@ const app = new Vue (
             newToDo: {
                 text: '',
 
-                done: '',
+                done: true,
             },
 
             newText: '',
@@ -34,19 +34,25 @@ const app = new Vue (
 
         methods : {
 
-            addNew(){                
+            addNew(){
 
                 if(this.newText == ''){
                     alert('Hai inserito un campo vuoto!')
                 } else{
 
-                    this.newToDo.done=true;
+                    // this.newToDo.done=true;
                     this.newToDo.text= this.newText;
-                    this.todos.push(this.newToDo); 
+                    this.todos.push(this.newToDo);
                     this.newText ='';
                 }
 
-            }            
+            },
+
+            remove(index){
+
+                this.todos.splice(index, 1);
+
+            },
 
         },
 

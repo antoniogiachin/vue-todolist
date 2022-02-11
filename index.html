@@ -22,7 +22,7 @@
 
            <div class="add_todos">
 
-            <input type="text" placeholder="Inserisci cose da fare" v-model="newText">
+            <input type="text" placeholder="Inserisci cose da fare" v-model="newText" @keyup.enter="addNew()">
             <button @click="addNew()">Inserisci</button>
 
            </div>
@@ -34,9 +34,9 @@
 
                     <h2>La tua lista</h2>
 
-                    <li class="clearfix" v-for="todo in todos" >
-                        {{todo.text}}
-                        <i class="fa-solid fa-eraser"></i>
+                    <li class="clearfix" v-for="(todo,index) in todos">
+                        {{todo.text}} {{index}} {{todo.done}}
+                        <i class="fa-solid fa-eraser" @click="remove(index)"></i>
 
                     </li>
 
