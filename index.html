@@ -22,8 +22,8 @@
         
            <div class="add_todos">
 
-            <input type="text" placeholder="Inserisci cose da fare">
-            <button>Inserisci</button>
+            <input type="text" placeholder="Inserisci cose da fare" v-model="newToDo.text">
+            <button @click="addNewToDo()">Inserisci</button>
 
            </div> 
 
@@ -32,7 +32,8 @@
 
                 <ul>
 
-                    <li class="clearfix">
+                    <li class="clearfix" v-for="task in todos">
+                        {{task.text}}
                         <i class="fa-solid fa-eraser"></i>
                     </li>
 
