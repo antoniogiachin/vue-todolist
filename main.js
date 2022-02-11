@@ -30,10 +30,17 @@ const app = new Vue (
             // aggiunge un nuovo todos
             addNew(){
 
-               this.todos.push({
-                   text: this.newText,
-                   done: false,
-                }) 
+                // Evito di far inserire un campo vuoto
+                if(this.newText == ''){
+                    alert('Hai inserito un campo vuoto!')
+                } else{
+
+                    this.todos.push({
+                        text: this.newText,
+                        done: false,
+                     }) 
+
+                }
                 
                 // resetta il campo dopo aggiunta
                 this.newText ='';
