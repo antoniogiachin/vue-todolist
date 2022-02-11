@@ -9,9 +9,9 @@
     <title>vue todolist</title>
 </head>
 <body>
-    
-    
-    
+
+
+
     <div id="app" class="container">
         <header>
             <img :src="logo" alt="logo-todos">
@@ -19,22 +19,25 @@
         </header>
 
         <main>
-        
+
            <div class="add_todos">
 
-            <input type="text" placeholder="Inserisci cose da fare" v-model="newToDo.text">
-            <button @click="addNewToDo()">Inserisci</button>
+            <input type="text" placeholder="Inserisci cose da fare" v-model="newText">
+            <button @click="addNew()">Inserisci</button>
 
-           </div> 
+           </div>
 
 
            <div class="display_todos">
 
                 <ul>
 
-                    <li class="clearfix" v-for="task in todos">
-                        {{task.text}}
+                    <h2>La tua lista</h2>
+
+                    <li class="clearfix" v-for="todo in todos" >
+                        {{todo.text}}
                         <i class="fa-solid fa-eraser"></i>
+
                     </li>
 
                 </ul>

@@ -68,3 +68,7 @@ main{
 .display_todos ul li:hover{
     background-color: aqua;
 }
+
+.display_todos h2{
+    margin-bottom: 20px;
+}

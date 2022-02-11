@@ -25,24 +25,28 @@ const app = new Vue (
             newToDo: {
                 text: '',
 
-                done: true,
+                done: '',
             },
+
+            newText: '',
 
         },
 
         methods : {
 
-            addNewToDo(){
+            addNew(){                
 
-                this.newToDo = '';
-
-                if(this.newToDo == ''){
-                    alert('Hai laciato il campo vuoto!');
+                if(this.newText == ''){
+                    alert('Hai inserito un campo vuoto!')
                 } else{
-                    this.todos.push(this.newToDo);
-                    this.newToDo = '';
+
+                    this.newToDo.done=true;
+                    this.newToDo.text= this.newText;
+                    this.todos.push(this.newToDo); 
+                    this.newText ='';
                 }
-            },
+
+            }            
 
         },
 
