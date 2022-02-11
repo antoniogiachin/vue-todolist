@@ -72,3 +72,12 @@ main{
 .display_todos h2{
     margin-bottom: 20px;
 }
+
+/* classe dinamica */
+.txt-line{
+    text-decoration: line-through;
+}
+
+.txt-none{
+    text-decoration: none;
+}

@@ -35,7 +35,7 @@
                     <h2>La tua lista</h2>
 
                     <li class="clearfix" v-for="(todo,index) in todos">
-                        {{todo.text}} {{index}} {{todo.done}}
+                        <span @click="check(index)" :class="todo.done == true ? 'txt-line' : 'txt-none' ">{{todo.text}} </span>
                         <i class="fa-solid fa-eraser" @click="remove(index)"></i>
 
                     </li>
