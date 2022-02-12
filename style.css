@@ -73,6 +73,10 @@ main{
     margin-bottom: 20px;
 }
 
+.display_todos span:hover{
+    cursor: pointer;
+}
+
 /* classe dinamica */
 .txt-line{
     text-decoration: line-through;
