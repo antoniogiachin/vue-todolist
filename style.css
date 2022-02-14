@@ -73,7 +73,7 @@ main{
     margin-bottom: 20px;
 }
 
-.display_todos span:hover{
+.display_todos span:hover, .display_todos .fa-solid:hover{
     cursor: pointer;
 }
 
@@ -82,6 +82,3 @@ main{
     text-decoration: line-through;
 }
 
-.txt-none{
-    text-decoration: none;
-}

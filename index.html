@@ -42,7 +42,7 @@
                     <li class="clearfix" v-for="(todo,index) in todos">
 
                         <!-- // Stampo il valore al ciclo, al click invoco funzione check per sbarrare e a tal proposito aggiungo classe -->
-                        <span @click="check(index)" :class="todo.done == true ? 'txt-line' : 'txt-none' ">{{todo.text}} </span>
+                        <span @click="check(index)" :class="todo.done? 'txt-line' : '' ">{{todo.text}} </span>
 
                         <!-- al click rimuovo todo -->
                         <i class="fa-solid fa-eraser" @click="remove(index)"></i>

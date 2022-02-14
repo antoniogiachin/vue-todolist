@@ -30,13 +30,13 @@ const app = new Vue (
             // aggiunge un nuovo todos
             addNew(){
 
-                // Evito di far inserire un campo vuoto
-                if(this.newText == ''){
+                // Evito di far inserire un campo vuoto e spazi tramite la funzione trim
+                if(this.newText.trim() == ''){
                     alert('Hai inserito un campo vuoto!')
                 } else{
 
                     this.todos.push({
-                        text: this.newText,
+                        text: this.newText.trim(),
                         done: false,
                      }) 
 
